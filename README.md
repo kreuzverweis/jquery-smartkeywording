@@ -20,7 +20,7 @@ Currently the JQuery plugin is under heavy development, so please include the ja
 
 ## Quick Start
 
-You have to include both java script files. The Keywording widget itself requires a div containing an input field and two unnumbered lists, one for the selected keywords and one for the proposals. A very simple example moght look like this:
+You have to include both java script files. The Keywording widget itself requires a div containing an input field and two unnumbered lists, one for the selected keywords and one for the proposals. A very simple example might look like this:
 
 	<div id="keywording">
 	  <div class="row-fluid">
@@ -72,7 +72,7 @@ For now this all that is required to use Smart Keywording. We will work on makin
 
 For now the two most important events for a typical keywording app are the selection and deselection of kewyords, since they typically require a modification of some metadata. We provide:
 
-* *smartkeywordingselected* When the user selects a proposals or enters a keyword using the input field.
+* *smartkeywordingselected* When the user selects a proposal or enters a keyword using the input field.
 * *smartkeywordingdeselected* When the user removes a keyword from the list of selected keywords.
 
 ### Example
