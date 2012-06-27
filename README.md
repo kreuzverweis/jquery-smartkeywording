@@ -85,8 +85,8 @@ For now the two most important events for a typical keywording app are the selec
 
 When integrated in an existing app, media items will probably have keywords already attached to them. We cann initialize the Smart Keywording plugin with these keywords by adding list items to the list during page generation and adding the appropriate JSON as the data-smartkeywording attribute. The list items requires the class .keyword.
 
-  <li class="keyword" data-smartkeywording="<keyword as JSON>">
-  </li>
+    <li class="keyword" data-smartkeywording="<keyword as JSON>">
+    </li>
 
 The JSON must have the following structure:
 
