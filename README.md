@@ -26,14 +26,6 @@ You have to include both java script files. The Keywording widget itself require
 	  <div class="row-fluid">
 	    <div class="span12 well">
 	      <ul class="unstyled smartkeywording-selected" style="float:left" data-asset="${asset.id}">
-	        #for (keyword <- asset.keywords)
-	          <li class="keyword primary small" data-smartkeywording="{&quot;label&quot;: &quot;${keyword}&quot;, &quot;score&quot;: &quot;0&quot;}">
-	            <a href="#">
-	              <i class="icon-tag"></i>
-	              <span style="margin-left: 2px;" score="0">${keyword}</span>
-	            </a>
-	          </li>
-	        #end
 	      </ul>
 	    </div>
 	  </div>
@@ -88,3 +80,21 @@ For now the two most important events for a typical keywording app are the selec
 			modifyKeyword('DELETE', this.label)
 		})
 	})
+
+## Adding existing keywords on page load
+
+When integrated in an existing app, media items will probably have keywords already attached to them. We cann initialize the Smart Keywording plugin with these keywords by adding list items to the list during page generation and adding the appropriate JSON as the data-smartkeywording attribute. The list items requires the class .keyword.
+
+  #for (keyword <- asset.keywords)
+    <li class="keyword" data-smartkeywording="{&quot;label&quot;: &quot;${keyword}&quot;, &quot;score&quot;: &quot;0&quot;}">
+    </li>
+  #end
+
+The JSON must have the following structure:
+
+ 	{
+ 		"label": "<keyword label>",
+ 		"score": "<score>"
+	}
+
+Please note that the double quotes are required by the JSON parser. The score is currently required, if you don't have one just use 0. We will change that in one of the next releases.
