@@ -61,7 +61,9 @@ $(function() {
 		})
 	})
 
-	$('#keywording').data('smartkeywording').settings.proposed = []
+	$('#keywording').each(function() {
+		data('smartkeywording').settings.proposed = []
+	})
 
 	$('#keywording').bind('smartkeywordingproposals', function(e, data) {
 		$('#loadingDiv').hide()
